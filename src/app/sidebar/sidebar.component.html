@@ -112,9 +112,19 @@
           >
             <i class="nav-icon fas fa-th"></i>
             <p>
-              Mahasiswa
+              Mahasiswa (Non-Router)
               <span class="right badge badge-danger">New</span>
             </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            [routerLink]="['/forex']"
+            routerLinkActive="router-link-active"
+            class="nav-link {{ moduleName == 'forex' ? 'active' : '' }}"
+          >
+            <li class="nav-icon far fa-money-bill-alt"></li>
+            <p>Forex</p>
           </a>
         </li>
         <li class="nav-item">
@@ -128,49 +138,58 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/layout/top-nav.html" class="nav-link">
+              <a href="assets/pages/layout/top-nav.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Top Navigation</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/layout/top-nav-sidebar.html" class="nav-link">
+              <a
+                href="assets/pages/layout/top-nav-sidebar.html"
+                class="nav-link"
+              >
                 <i class="far fa-circle nav-icon"></i>
                 <p>Top Navigation + Sidebar</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/layout/boxed.html" class="nav-link">
+              <a href="assets/pages/layout/boxed.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Boxed</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/layout/fixed-sidebar.html" class="nav-link">
+              <a href="assets/pages/layout/fixed-sidebar.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Fixed Sidebar</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/layout/fixed-sidebar-custom.html" class="nav-link">
+              <a
+                href="assets/pages/layout/fixed-sidebar-custom.html"
+                class="nav-link"
+              >
                 <i class="far fa-circle nav-icon"></i>
                 <p>Fixed Sidebar <small>+ Custom Area</small></p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/layout/fixed-topnav.html" class="nav-link">
+              <a href="assets/pages/layout/fixed-topnav.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Fixed Navbar</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/layout/fixed-footer.html" class="nav-link">
+              <a href="assets/pages/layout/fixed-footer.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Fixed Footer</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
+              <a
+                href="assets/pages/layout/collapsed-sidebar.html"
+                class="nav-link"
+              >
                 <i class="far fa-circle nav-icon"></i>
                 <p>Collapsed Sidebar</p>
               </a>
@@ -187,25 +206,25 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/charts/chartjs.html" class="nav-link">
+              <a href="assets/pages/charts/chartjs.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>ChartJS</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/charts/flot.html" class="nav-link">
+              <a href="assets/pages/charts/flot.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Flot</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/charts/inline.html" class="nav-link">
+              <a href="assets/pages/charts/inline.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Inline</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/charts/uplot.html" class="nav-link">
+              <a href="assets/pages/charts/uplot.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>uPlot</p>
               </a>
@@ -222,7 +241,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/UI/general.html" class="nav-link">
+              <a href="assets/pages/UI/general.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>General</p>
               </a>
@@ -234,37 +253,37 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/UI/buttons.html" class="nav-link">
+              <a href="assets/pages/UI/buttons.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Buttons</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/UI/sliders.html" class="nav-link">
+              <a href="assets/pages/UI/sliders.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Sliders</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/UI/modals.html" class="nav-link">
+              <a href="assets/pages/UI/modals.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Modals & Alerts</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/UI/navbar.html" class="nav-link">
+              <a href="assets/pages/UI/navbar.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Navbar & Tabs</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/UI/timeline.html" class="nav-link">
+              <a href="assets/pages/UI/timeline.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Timeline</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/UI/ribbons.html" class="nav-link">
+              <a href="assets/pages/UI/ribbons.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Ribbons</p>
               </a>
@@ -281,25 +300,25 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/forms/general.html" class="nav-link">
+              <a href="assets/pages/forms/general.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>General Elements</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/forms/advanced.html" class="nav-link">
+              <a href="assets/pages/forms/advanced.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Advanced Elements</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/forms/editors.html" class="nav-link">
+              <a href="assets/pages/forms/editors.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Editors</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/forms/validation.html" class="nav-link">
+              <a href="assets/pages/forms/validation.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Validation</p>
               </a>
@@ -316,7 +335,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/tables/simple.html" class="nav-link">
+              <a href="assets/pages/tables/simple.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Simple Tables</p>
               </a>
@@ -328,7 +347,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/tables/jsgrid.html" class="nav-link">
+              <a href="assets/pages/tables/jsgrid.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>jsGrid</p>
               </a>
@@ -337,7 +356,7 @@
         </li>
         <li class="nav-header">EXAMPLES</li>
         <li class="nav-item">
-          <a href="pages/calendar.html" class="nav-link">
+          <a href="assets/pages/calendar.html" class="nav-link">
             <i class="nav-icon far fa-calendar-alt"></i>
             <p>
               Calendar
@@ -346,13 +365,13 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="pages/gallery.html" class="nav-link">
+          <a href="assets/pages/gallery.html" class="nav-link">
             <i class="nav-icon far fa-image"></i>
             <p>Gallery</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="pages/kanban.html" class="nav-link">
+          <a href="assets/pages/kanban.html" class="nav-link">
             <i class="nav-icon fas fa-columns"></i>
             <p>Kanban Board</p>
           </a>
@@ -367,19 +386,19 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/mailbox/mailbox.html" class="nav-link">
+              <a href="assets/pages/mailbox/mailbox.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Inbox</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/mailbox/compose.html" class="nav-link">
+              <a href="assets/pages/mailbox/compose.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Compose</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/mailbox/read-mail.html" class="nav-link">
+              <a href="assets/pages/mailbox/read-mail.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Read</p>
               </a>
@@ -396,13 +415,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/examples/invoice.html" class="nav-link">
+              <a href="assets/pages/examples/invoice.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Invoice</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/examples/profile.html" class="nav-link">
+              <a href="assets/pages/examples/profile.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Profile</p>
               </a>
