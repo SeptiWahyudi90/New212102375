@@ -64,14 +64,14 @@ export class CuacaComponent implements OnInit, AfterViewInit {
   }
   convertTimestamp(timestamp: any): any {
     var date = new Date(timestamp * 1000);
-    const formattedtTime = date.toLocaleDateString('id-ID');
+    const formattedtTime = date.toLocaleDateString('id-ID') + '' + date.toLocaleTimeString('id-ID');
     return formattedtTime;
   }
 
   bind_table1(): void {
     this.http
       .get(
-        'http://api.openweathermap.org/data/2.5/forecast?id=1630789&appid=91ad02eb393ead013a48f7615e09936d'
+        'https://api.openweathermap.org/data/2.5/forecast?id=1630789&appid=91ad02eb393ead013a48f7615e09936d'
       )
       .subscribe((data: any) => {
         console.log(data);
@@ -106,6 +106,7 @@ export class CuacaComponent implements OnInit, AfterViewInit {
         });
 
         this.table1.draw(false);
+        this.setsun(data);
       });
   }
 
@@ -115,5 +116,5 @@ export class CuacaComponent implements OnInit, AfterViewInit {
     return celcius;
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {}
 }
