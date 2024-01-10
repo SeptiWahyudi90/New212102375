@@ -1,55 +1,62 @@
 <div class="wrapper">
   <app-header></app-header>
-  <app-sidebar>moduleName="Mahasiswa"</app-sidebar>
-
+  <app-sidebar moduleName="mahasiswa"></app-sidebar>
   <div class="content-wrapper">
     <div class="content-header">
-      <div class="container-fuild">
+      <div class="conteiner-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 text-dark">Mahasiswa</h1>
-          </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
-              <li class="breadcrumb-item active">Mahasiswa</li>
-            </ol>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="/dashboard">Home</a></li>
+                <li class="breadcrumb-item active">mahasiswa</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <section class="content">
-      <div class="container-fuild">
-        <div class="row">
-          <button
-            id="tambahButton"
-            class="btn btn-primary mb-2"
-            (click)="showtambahModal()"
-          >
-            <i class="fa fa-plus"></i>
-            Tambah
-          </button>
-          <div class="table-responsive">
-            <table
-              id="table1"
-              class="table table-hover table-bordered table-striped"
-            >
-              <thead>
-                <tr>
-                  <th>NIM</th>
-                  <th>Nama</th>
-                  <th>Jenis Kelamin</th>
-                  <th>Tempat, Tanggal Lahir</th>
-                  <th>JP</th>
-                  <th>Alamat</th>
-                  <th>Status</th>
-                  <th>Tahun Masuk</th>
-                </tr>
-              </thead>
-            </table>
+      <div class="container-fluid">
+        <div class="row"></div>
+        <section class="content">
+          <div class="container-fluid">
+            <!--main row-->
+            <div class="row">
+              <button
+                id="tambahButton"
+                class="btn-primary mb-2"
+                (click)="showTambahModal()"
+              >
+                <i class="fa fa-plus"></i>
+                Tambah
+              </button>
+            </div>
+            <div class="row">
+              <div class="table-responsive">
+                <table
+                  id="table1"
+                  class="table table-hover table-bordered table-striped"
+                >
+                  <thead>
+                    <tr>
+                      <th>NIM</th>
+                      <th>Nama</th>
+                      <th>jenis kelamin</th>
+                      <th>tempat,Tanggal lahir</th>
+                      <th>jp</th>
+                      <th>alamat</th>
+                      <th>status</th>
+                      <th>tahun masuk</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </section>
   </div>
@@ -62,7 +69,7 @@
       <div class="modal-header bg-primary">
         <h5 class="modal-title">
           <i class="fa fa-plus"></i>
-          Mahasiswa Baru
+          Mahasiswa baru
         </h5>
         <button class="close" data-dismiss="modal">
           <span aria-hidden="true">&times;</span>
@@ -81,20 +88,18 @@
             <input type="text" id="namaText" class="form-control" />
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-12 col-xs-12">
-            <label>Jenis Kelamin</label>
-            <select id="text" id="jenisKelaminSelect" class="form-control">
-              <option value="Laki-Laki">Laki-Laki</option>
-              <option value="Perempuan">Perempuan</option>
-            </select>
-          </div>
+        <div class="col-md-12 col-lg-12 col-xs-12">
+          <label>Jenis Kelamin</label>
+          <select type="text" id="jenisKelaminText" class="form-control">
+            <option value="Laki Laki">Laki Laki</option>
+            <option value="Perempuan">Perempuan</option>
+          </select>
         </div>
-        <div class="row">
-          <div class="col-md-12 col-lg-12 col-xs-12">
-            <label>Tempat Lahir</label>
-            <input type="text" id="tempatlahirText" class="form-control" />
-          </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-lg-12 col-xs-12">
+          <label>Tempat Lahir</label>
+          <input type="text" id="tempatLahirText" class="form-control" />
         </div>
         <div class="row">
           <div class="col-md-12 col-lg-12 col-xs-12">
@@ -104,8 +109,8 @@
         </div>
         <div class="row">
           <div class="col-md-12 col-lg-12 col-xs-12">
-            <label>Jurusan / Prodi</label>
-            <select id="text" id="nimText" class="form-control">
+            <label>Jurusan/prodi</label>
+            <select id="jpSelect" class="form-control">
               <option value="SI/SI">SI/SI</option>
               <option value="TI/TI">TI/TI</option>
             </select>
@@ -119,12 +124,12 @@
         </div>
         <div class="row">
           <div class="col-md-12 col-lg-12 col-xs-12">
-            <label>Status Pernikahan</label>
-            <select id="text" id="statusNikahText" class="form-control">
-              <option value="Belum Menikah">Belum Menikah</option>
-              <option value="Menikah">Menikah</option>
+            <label>Status Pernikahan </label>
+            <select id="statusNikahSelect" class="form-control">
+              <option value="belum menikah">belum menikah</option>
+              <option value="menikah">menikah</option>
               <option value="Duda">Duda</option>
-              <option value="Janda">janda</option>
+              <option value="Janda">Janda</option>
             </select>
           </div>
         </div>
@@ -134,12 +139,12 @@
             <input type="number" id="tahunMasukText" class="form-control" />
           </div>
         </div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-primary" (click)="postRecord()">
-          <i class="fa fa-save"></i>
-          Simpan
-        </button>
+        <div class="modal-footer">
+          <button class="btn btn-primary" (click)="postRecord()">
+            <i class="fa fa-save"></i>
+            Simpan
+          </button>
+        </div>
       </div>
     </div>
   </div>

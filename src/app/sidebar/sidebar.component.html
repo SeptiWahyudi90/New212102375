@@ -1,4 +1,3 @@
-<!-- Main Sidebar Container -->
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
   <!-- Brand Logo -->
   <a href="index3.html" class="brand-link">
@@ -56,14 +55,14 @@
              with font-awesome or any other icon font library -->
         <li
           class="nav-item has-treeview {{
-            moduleName == 'dashboard' ? 'menu-open' : ''
-          }} {{ moduleName == 'dashboard2' ? 'menu-open' : '' }}"
+            modulename == 'dashboard' ? 'menu-open' : ''
+          }} {{ modulename == 'dashboard2' ? 'menu-open' : '' }}"
         >
           <a
             href="#"
-            class="nav-link {{ moduleName == 'dashboard' ? 'active' : '' }} {{
-              moduleName == 'dashboard2' ? 'active' : ''
-            }}"
+            class="nav-link active {{
+              modulename == 'dashboard' ? 'active' : ''
+            }} {{ modulename == 'dashboard2' ? 'active' : '' }}"
           >
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
@@ -75,7 +74,8 @@
             <li class="nav-item">
               <a
                 [routerLink]="['/dashboard']"
-                class="nav-link {{ moduleName == 'dashboard' ? 'active' : '' }}"
+                routerLinkActive="router-Link-active"
+                class="nav-link {{ modulename == 'dashboard' ? 'active' : '' }}"
               >
                 <i class="far fa-circle nav-icon"></i>
                 <p>Dashboard v1</p>
@@ -84,8 +84,9 @@
             <li class="nav-item">
               <a
                 [routerLink]="['/dashboard2']"
+                routerLinkActive="router-Link-active"
                 class="nav-link {{
-                  moduleName == 'dashboard2' ? 'active' : ''
+                  modulename == 'dashboard2' ? 'active' : ''
                 }}"
               >
                 <i class="far fa-circle nav-icon"></i>
@@ -95,8 +96,9 @@
             <li class="nav-item">
               <a
                 [routerLink]="['/dashboard3']"
+                routerLinkActive="router-Link-active"
                 class="nav-link {{
-                  moduleName == 'dashboard3' ? 'active' : ''
+                  modulename == 'dashboard3' ? 'active' : ''
                 }}"
               >
                 <i class="far fa-circle nav-icon"></i>
@@ -108,33 +110,36 @@
         <li class="nav-item">
           <a
             href="/mahasiswa"
-            class="nav-link {{ moduleName == 'mahasiswa' ? 'active' : '' }}"
+            class="nav-link {{ modulename == 'mahasiswa' ? 'active' : '' }}"
           >
             <i class="nav-icon fas fa-th"></i>
-            <p>
-              Mahasiswa (Non-Router)
-              <span class="right badge badge-danger">New</span>
-            </p>
+            <p>mahasiswa</p>
           </a>
         </li>
         <li class="nav-item">
           <a
             [routerLink]="['/forex']"
-            routerLinkActive="router-link-active"
-            class="nav-link {{ moduleName == 'forex' ? 'active' : '' }}"
+            routerLinkActive="router-Link-active"
+            class="nav-link {{ modulename == 'forex' ? 'active' : '' }}"
           >
-            <li class="nav-icon far fa-money-bill-alt"></li>
-            <p>Forex</p>
+            <i class="nev-icon far fa-money-bill-alt"></i>
+            <p>forex</p>
           </a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a
+            [routerLink]="['/cuaca']"
+            routerLinkActive="router-link-active"
+            class="nav-link {{ modulename == 'cuaca' ? 'active' : '' }}"
+          >
+            <i class="nav-icon fas fa-cloud-rain"></i>
+            <p>cuaca</p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/mahasiswa" class="nav-link">
             <i class="nav-icon fas fa-copy"></i>
-            <p>
-              Layout Options
-              <i class="fas fa-angle-left right"></i>
-              <span class="badge badge-info right">6</span>
-            </p>
+            <p>Mahasiswa (Non-router)</p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
@@ -247,7 +252,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/UI/icons.html" class="nav-link">
+              <a href="assets/pages/UI/icons.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Icons</p>
               </a>
@@ -312,7 +317,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="assets/pages/forms/editors.html" class="nav-link">
+              <a href="passets/ages/forms/editors.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Editors</p>
               </a>
@@ -341,7 +346,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/tables/data.html" class="nav-link">
+              <a href="assets/pages/tables/data.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>DataTables</p>
               </a>
@@ -415,13 +420,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="assets/pages/examples/invoice.html" class="nav-link">
+              <a href="pages/examples/invoice.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Invoice</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="assets/pages/examples/profile.html" class="nav-link">
+              <a href="pages/examples/profile.html" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Profile</p>
               </a>

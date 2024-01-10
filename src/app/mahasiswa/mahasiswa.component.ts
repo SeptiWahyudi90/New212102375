@@ -34,88 +34,83 @@ export class MahasiswaComponent implements OnInit, AfterViewInit {
         this.table1.clear();
 
         data.forEach((element: any) => {
-          var tempatTanggallahir =
-            element.tempatLahir + ',' + element.TanggalLahir;
+          var tempatTanggalLahir =
+            element.TempatLahir + ',' + element.TanggalLahir;
 
           var row = [
             element.NIM,
             element.Nama,
-            element.jenisKelamin,
-            tempatTanggallahir,
-            element.Jp,
+            element.JenisKelamin,
+            tempatTanggalLahir,
+            element.JP,
             element.Alamat,
             element.StatusNikah,
             element.TahunMasuk,
           ];
+
           this.table1.row.add(row);
         });
+
         this.table1.draw(false);
       });
   }
-  showtambahModal(): void {
+  showTambahModal(): void {
     $('#tambahModal').modal();
   }
 
   postRecord(): void {
     var alamat = $('#alamatText').val();
-    var jenisKelamin = $('#jenisKelaminSelect').val();
-    var Jp = $('#jpSelect').val();
+    var JenisKelamin = $('#jenisKelaminSelect').val();
+    var JP = $('#jpSelect').val();
     var nama = $('#namaText').val();
     var nim = $('#nimText').val();
-    var statusNikah = $('#statusNikahSelect').val();
+    var statusNikah = $('#jenisKelaminSelect').val();
     var tahunMasuk = $('#tahunMasukText').val();
-    var TanggalLahir = $('#tanggalLahirText').val();
-    var tempatLahir = $('#tempatlahirText').val();
+    var tanggalLahir = $('#tanggalLahirText').val();
+    var tempatLahir = $('#tempatLahirText').val();
 
     if (nim.length == 0) {
       alert('NIM belum diisi');
       return;
     }
-
     if (nama.length == 0) {
       alert('Nama belum diisi');
       return;
     }
-
     if (tempatLahir.length == 0) {
-      alert('Tempat Lahir belum diisi');
+      alert('Tempat lahir belum diisi');
       return;
     }
-
-    if (TanggalLahir.length == 0) {
-      alert('tanggal Lahir belum diisi');
+    if (tanggalLahir.length == 0) {
+      alert('tanggal lahir belum diisi');
       return;
     }
-
     if (alamat.length == 0) {
-      alert('Alamat belum diisi');
+      alert('alamat  belum diisi');
       return;
     }
-
     if (tahunMasuk.length == 0) {
-      alert('Tahun Masuk belum diisi');
+      alert('tahun masuk belum diisi');
       return;
     }
-
     alamat = encodeURIComponent(alamat);
-    jenisKelamin = encodeURIComponent(jenisKelamin);
-    Jp = encodeURIComponent(Jp);
-    alamat = encodeURIComponent(alamat);
+    JenisKelamin = encodeURIComponent(JenisKelamin);
+    JP = encodeURIComponent(JP);
     nama = encodeURIComponent(nama);
     nim = encodeURIComponent(nim);
     statusNikah = encodeURIComponent(statusNikah);
     tahunMasuk = encodeURIComponent(tahunMasuk);
-    TanggalLahir = encodeURIComponent(TanggalLahir);
+    tanggalLahir = encodeURIComponent(tanggalLahir);
     tempatLahir = encodeURIComponent(tempatLahir);
 
     var url =
-      'https://stmikpontianak.net/011100862/tampilMahasiswa.php' +
+      'https://stmikpontianak.net/011100862/tambahMahasiswa.php' +
       '?alamat=' +
       alamat +
       '&jenisKelamin=' +
-      jenisKelamin +
+      JenisKelamin +
       '&jp=' +
-      Jp +
+      JP +
       '&nama=' +
       nama +
       '&nim=' +
@@ -125,7 +120,7 @@ export class MahasiswaComponent implements OnInit, AfterViewInit {
       '&tahunMasuk=' +
       tahunMasuk +
       '&tanggalLahir=' +
-      TanggalLahir +
+      tanggalLahir +
       '&tempatLahir=' +
       tempatLahir;
 

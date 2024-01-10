@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./sidebar.component.css'],
 })
 export class SidebarComponent {
-  @Input() moduleName: String = '';
+  @Input() modulename: string = '';
 }

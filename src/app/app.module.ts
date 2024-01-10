@@ -17,6 +17,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { MahasiswaComponent } from './mahasiswa/mahasiswa.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ForexComponent } from './forex/forex.component';
+import { CuacaComponent } from './cuaca/cuaca.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ForexComponent } from './forex/forex.component';
     Dashboard3Component,
     MahasiswaComponent,
     ForexComponent,
+    CuacaComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,12 +45,6 @@ import { ForexComponent } from './forex/forex.component';
       // Register the ServiceWorker as soon as the application is stable
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000',
-    }),
-    ServiceWorkerModule.register('ngsw-worker.js', {
-      enabled: !isDevMode(),
-      // Register the ServiceWorker as soon as the application is stable
-      // or after 30 seconds (whichever comes first).
-      registrationStrategy: 'registerWhenStable:30000'
     }),
   ],
   providers: [],
